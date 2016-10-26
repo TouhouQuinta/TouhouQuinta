@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="nouislider.min.css" rel="stylesheet">
+    <script src="nouislider.js"></script>
+    <script src="wnumb.js"></script>
+    <style>
+        #showcase {
+            margin: 0 20px;
+            text-align: center;
+        }
+        #slider-format {
+            width: 300px;
+            margin: 0 0 30px 30px;
+            right: 0px;
+        }
+        #input-format {
+            font-size: 20px;
+            width: 10%;
+        }
+    </style>
+</head>
+<body>
+	<h1> "Slider" </h1>
+    <div id="slider-format"></div>
+    <input id="input-format">
+    <h1> Muestras </h1>
+     <iframe width="420" height="315"
+    src="https://www.youtube.com/embed/TVBr4d2lVOk?autoplay=1">
+    </iframe> 
+</body>
+<script>
+var sliderFormat = document.getElementById('slider-format');                    // Define el slider
+
+noUiSlider.create(sliderFormat, {                                               // Establece propiedades del slider
+    start: [ 1 ],
+    range: {
+        'min': [     1,1 ],
+        '30%': [   10,  10 ],
+        '70%': [   100,  100 ],
+        'max': [ 1000 ]
+    },
+    format: wNumb({
+        decimals: 0,
+        thousand: '',
+    }),
+});
+var inputFormat = document.getElementById('input-format');                      // Establece campo de muestra de valores
+
+sliderFormat.noUiSlider.on('update', function( values, handle ) {               // Actualiza el valor del campo
+    inputFormat.value = values[handle];
+});
+
+inputFormat.addEventListener('change', function(){                              // Funcion que detecta cuando el valor del slider ha cambiado
+    sliderFormat.noUiSlider.set(this.value);
+});
+</script>   
+</html>
