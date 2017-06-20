@@ -44,7 +44,8 @@ template {
 }
 
 a {
-    background: transparent
+    background: transparent;
+    text-decoration: none;
 }
 
 a:active,
@@ -4820,6 +4821,20 @@ input[type="submit"]:hover {
         padding-top: 24px
     }
 }
+infox {
+	text-decoration: none;
+    display: block;
+    padding: 8px;
+    position: relative;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    text-decoration: none;
+}
+infox:hover {
+	text-decoration: none;
+    color: #000;
+    background-color: #eee
+}
 
 .news-list {
     padding-left: 0
@@ -4837,6 +4852,7 @@ input[type="submit"]:hover {
 .news-list li:last-child {
     border-bottom: none
 }
+
 
 .news-list a {
     display: block;
