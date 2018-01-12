@@ -1,5 +1,6 @@
 # touhouquinta.github.io
 
-Page for touhou quinta
+Page for touhou quinta  
 pls do not steal, clone or stuff asdf
-asdf
+asdf  
+[ ] incomplete
