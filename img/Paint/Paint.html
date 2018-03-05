@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<title>Galeria</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<h2 class="w3-center">Dibujos Paint</h2>
+
+<div class="w3-content w3-display-container" align="middle" style="height: 600px;width: 1100px">
+  <img class="mySlides" src="Cirno-Lunatic-cirnopaint.png" style="margin:0px auto;display:block;max-width:100%;max-height:100%;" >
+  <img class="mySlides" src="Marisa_Borisu.png" style="margin:0px auto;display:block;max-width:100%;max-height:100%;" >
+  <img class="mySlides" src="Marisa-Victorverdecito.jpg" style="margin:0px auto;display:block;max-width:100%;max-height:100%;" >
+  <img class="mySlides" src="Miko-JuanGodoyJorquera.png" style="margin:0px auto;display:block;max-width:100%;max-height:100%;" >
+  <img class="mySlides" src="Mokou-lunatic-mokoupaint.png" style="margin:0px auto;display:block;max-width:100%;max-height:100%;" >
+  <img class="mySlides" src="Satori-lunatic-satoripaint.png" style="margin:0px auto;display:block;max-width:100%;max-height:100%;" >
+  <img class="mySlides" src="Seija-israel.jpg" style="margin:0px auto;display:block;max-width:100%;max-height:100%;" >
+  <img class="mySlides" src="Seija-lester.jpg" style="margin:0px auto;display:block;max-width:100%;max-height:100%;" >
+  <img class="mySlides" src="Seija_Rafaga_sukunnnn.png" style="margin:0px auto;display:block;max-width:100%;max-height:100%;" >
+  <img class="mySlides" src="Shikieiki-victor.jpg" style="margin:0px auto;display:block;max-width:100%;max-height:100%;" >
+  <img class="mySlides" src="unknown-rodrigocalderon.jpg" style="margin:0px auto;display:block;max-width:100%;max-height:100%;" >
+  <img class="mySlides" src="Youmu-fabu.jpg" style="margin:0px auto;display:block;max-width:100%;max-height:100%;" >
+  <img class="mySlides" src="Youmu-nozomi.jpg" style="margin:0px auto;display:block;max-width:100%;max-height:100%;" >
+  <img class="mySlides" src="Reisen-kotodude-coneja.png" style="margin:0px auto;display:block;max-width:100%;max-height:100%;" >
+
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
